@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Insert title here</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />  <!--  모바일 화면 크기에 맞춤 -->
+<!-- Copy-and-Paste Snippet for CDN-hosted files: -->
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+<link rel="stylesheet" href="css/style.css">
+
+
+<!--  스타일 지정//  . 은 class, # 은 id -->
+ <style type="text/css"> 
+ .list_style { 
+            color: #FF1C10; 
+            padding-top: 10px; 
+       } 
+</style> 
+    
+</head>
+
+<body>
+<!-- page -->
+
+
+<!-- page -->
+<div data-role="page" id="page" data-fullscreen="true"> 
+
+	<!-- header -->
+<div data-role="header" data-position="fixed"> 	
+
+	<h1 >야놀자 숙박</h1>
+	
+	<!-- panel  	 id가 right-panel에 링크를 건다 -->
+	 <a href="#right-panel" data-icon="gear"  data-shadow="false" data-iconshadow="false" class="ui-btn-right">메뉴</a>
+   	<!-- <a href="#" data-icon="gear" class="ui-btn-right">메뉴</a>-->
+<a href="#left-panel" data-icon="gear" class="ui-btn-left">회원</a>
+	
+
+<!-- navbar -->
+    <div data-role="navbar">
+        <ul>
+<li><a href="#">N 신축오픈</a></li>
+<li><a href="#">추천숙박</a></li>
+</ul>
+    </div><!-- /navbar -->
+	</div><!-- /header -->
+
+<!-- content  -->  
+  <div data-role="content"> 
+  
+<!-- listview_thumbnail -->
+<ul data-role="listview" data-inset="true">
+<li><a href="#">
+        <img src="http://demos.jquerymobile.com/1.4.5/_assets/img/album-bb.jpg">
+	<h2 class="list_style">옥타곤</h2>
+	<p>Broken Bells</p></a>
+    </li>
+<li><a href="#">
+        <img src="http://demos.jquerymobile.com/1.4.5/_assets/img/album-hc.jpg">
+    <h2>MASS</h2>
+    <p>Hot Chip</p></a>
+    </li>
+	<li><a href="#">
+        <img src="http://demos.jquerymobile.com/1.4.5/_assets/img/album-p.jpg">
+    <h2>NB</h2>
+    <p>Phoenix</p></a>
+    </li>
+	<li><a href="#">
+        <img src="http://demos.jquerymobile.com/1.4.5/_assets/img/album-bb.jpg">
+    <h2>옥타곤</h2>
+    <p>Broken Bells</p></a>
+    </li>
+	<li><a href="#">
+        <img src="http://demos.jquerymobile.com/1.4.5/_assets/img/album-hc.jpg">
+    <h2>MASS</h2>
+    <p>Hot Chip</p></a>
+    </li>
+	<li><a href="#">
+        <img src="http://demos.jquerymobile.com/1.4.5/_assets/img/album-p.jpg">
+    <h2>NB</h2>
+    <p>Phoenix</p></a>
+    </li>
+	<li><a href="#">
+        <img src="http://demos.jquerymobile.com/1.4.5/_assets/img/album-bb.jpg">
+    <h2>Broken Bells</h2>
+    <p>Broken Bells</p></a>
+    </li>
+	<li><a href="#">
+        <img src="http://demos.jquerymobile.com/1.4.5/_assets/img/album-hc.jpg">
+    <h2>Warning</h2>
+    <p>Hot Chip</p></a>
+    </li>
+	<li><a href="#">
+        <img src="http://demos.jquerymobile.com/1.4.5/_assets/img/album-p.jpg">
+    <h2>Wolfgang Amadeus Phoenix</h2>
+    <p>Phoenix</p></a>
+    </li>
+</ul><!-- /end listview_thumbnail -->
+</div> <!-- /content  -->  
+  
+<!-- footer -->
+    <div data-role="footer" data-position="fixed">
+        <div data-role="navbar">
+            <ul>
+				<li><a href="#" data-icon="grid">홈</a></li>
+				<li><a href="#" data-icon="star" class="ui-btn-active">지역</a></li>
+				<li><a href="#" data-icon="gear">내주변</a></li>
+				<li><a href="#" data-icon="star">기획전</a></li>
+				<li><a href="#" data-icon="grid">무료권</a></li>
+				</ul>
+        </div><!-- /navbar -->
+</div>
+<!-- /footer -->
+
+<!-- panel -->
+<div data-role="panel" id="right-panel" data-display="push" data-position="right" data-theme="b">
+        <p>Right push panel.</p>
+        <a href="#" data-rel="close" class="ui-btn ui-corner-all ui-shadow ui-mini ui-btn-inline ui-icon-delete ui-btn-icon-right">Close</a>
+    </div><!-- /panel -->
+<!-- left panel -->
+<div class="panel left panel left ui-panel ui-panel-position-left ui-panel-display-push ui-panel-animate ui-panel-open" data-role="panel" id="left-panel" data-display="push" data-position="left">
+            <ul>
+                <li class="newsfeed"><a href="#" title="Home" class="ui-link">News Feed</a></li>
+                <li class="profile"><a href="#" title="Profile" class="ui-link">Profile</a></li>
+                <li class="setting"><a href="#" title="Setting" class="ui-link">Setting</a></li>
+                <li class="logout"><a href="#" title="Logout" class="ui-link">Logout</a></li>
+                <li class="report"><a href="#" title="Report" class="ui-link">Report Bug</a></li>
+            </ul>
+ </div>
+<!-- /panel -->
+</div><!-- /page -->
+
+</body>
+</html>

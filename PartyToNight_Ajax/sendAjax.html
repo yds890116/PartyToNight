@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+
+		<!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
+		Remove this if you use the .htaccess -->
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+		<title>sendAjax</title>
+		<meta name="description" content="">
+		<meta name="author" content="user">
+
+		<meta name="viewport" content="width=device-width; initial-scale=1.0">
+
+		<!-- Replace favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
+		<link rel="shortcut icon" href="/favicon.ico">
+		<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+		<!-- javascript library -->
+		<script src="angular.min.js"></script>
+	</head>
+
+	<div class="#" data-ng-app="myApp">
+		<h1>Example</h1>
+
+		<div data-ng-controller="search_ctrl">
+
+			<input type="text" data-ng-model="key_seq">
+
+			<table class="table table-striped">
+				<thead>
+					<tr>
+						<th>help_category_id</th>
+						<th>name</th>
+						<th>parent_category_id</th>
+						<th>url</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr data-ng-repeat="row in rows">
+						<td>{{row.help_category_id}}</td>
+						<td>{{row.name}}</td>
+						<td>{{row.parent_category_id}}</td>
+						<td>{{row.url}}</td>
+					</tr>
+				</tbody>
+			</table>
+			<button data-ng-click="sendValue()">
+					insert
+				</button>
+		</div>
+		<!-- <div data-ng-controller="send_ctrl">
+			<input type="text" data-ng-model="key_seq">
+			<input type="text" data-ng-model="key_tel">
+			<input type="text" data-ng-model="key_memo"> 
+			<hidden type="text" data-ng-model="message">
+				<button data-ng-click="sendValue()">
+					insert
+				</button>
+				<hr>
+				{{message}}
+		</div>-->
+	</div>
+</html>
+
+<script>
+	var app = angular.module("myApp", []);
+
+	app.controller("search_ctrl", function($scope, $http) {
+		
+		$scope.sendValue = function(){
+
+		var dataObj = {
+				seq : $scope.key_seq
+		};	
+		
+		
+		var res = $http({
+				method : "POST",
+				url : "http://localhost/PartyToNight/jsonTest.php" ,
+				data : dataObj,
+				headers: {'Content-Type': 'application/x-www-form-urlencoded'}
+			});
+		/* Check whether the HTTP Request is successful or not. */
+		res.success(function(data) {
+			console.log(data);
+			$scope.rows = data;
+		});
+		
+		}
+	})
+
+/*	app.controller("send_ctrl", function($scope, $http) {
+	
+		$scope.sendValue = function() {
+			var request = $http({
+				method : "post",
+				url : "http://localhost/jsonTest?" + $scope.key_seq ,
+				headers : {
+					'Content-Type' : 'application/x-www-form-urlencoded'
+				}
+			});
+	
+			// Check whether the HTTP Request is successful or not. 
+			request.success(function(data) {
+				$scope.message = data;
+			});
+		}
+	}) 
+*/
+
+</script>

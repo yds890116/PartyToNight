@@ -9,9 +9,68 @@
 
 <!-- Copy-and-Paste Snippet for CDN-hosted files: -->
 <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
 <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 
+
+    <!--- semantic Site CSS -->
+    <link rel="stylesheet" type="text/css" href="semantic/components/reset.css">
+    <link rel="stylesheet" type="text/css" href="semantic/components/site.css">
+    <link rel="stylesheet" type="text/css" href="semantic/components/grid.css">
+
+    <!--- semantic Component CSS -->
+    <link rel="stylesheet" type="text/css" href="semantic/components/menu.css">
+    <link rel="stylesheet" type="text/css" href="semantic/components/input.css">
+    <link rel="stylesheet" type="text/css" href="semantic/components/dropdown.css">
+    <link rel="stylesheet" type="text/css" href="semantic/components/icon.css">
+    <link rel="stylesheet" type="text/css" href="semantic/components/button.css">
+    <link rel="stylesheet" type="text/css" href="semantic/components/transition.css">
+
+    <!--- semantic Example Libs -->
+    <link rel="stylesheet" type="text/css" href="semantic/components/popup.css">
+    <script src="semantic/assets/library/jquery.min.js"></script>
+    <script src="semantic/assets/library/iframe-content.js"></script>
+    <script src="semantic/assets/show-examples.js"></script>
+    <script type="text/javascript" src="semantic/components/popup.js"></script>
+
+    <!--- semantic Component JS -->
+    <script type="text/javascript" src="semantic/components/transition.js"></script>
+    <script type="text/javascript" src="semantic/components/dropdown.js"></script>
+
+    <!--- semantic Example CSS -->
+    <style>
+        body {
+            padding: 1em;
+        }
+        .ui.menu {
+            margin: 3em 0em;
+        }
+        .ui.menu:last-child {
+            margin-bottom: 110px;
+        }
+    </style>
+
+    <!--- semantic Example Javascript -->
+    <script>
+        $(document)
+                .ready(function() {
+                    $('.ui.menu .ui.dropdown').dropdown({
+                        on: 'hover'
+                    });
+                    $('.ui.menu a.item')
+                            .on('click', function() {
+                                $(this)
+                                        .addClass('active')
+                                        .siblings()
+                                        .removeClass('active')
+                                ;
+                            })
+                    ;
+                })
+        ;
+    </script>
 </head>
 
 <body>
@@ -125,8 +184,8 @@
 
         <h1 >Party ToNight</h1>
 
-        <!-- panel  	 id가 right-panel에 링크를 건다 -->
-        <a href="#right-panel" data-icon="gear"  data-shadow="false" data-iconshadow="false" class="ui-btn-right">메뉴</a>
+        <!-- panel id가 right-panel에 링크를 건다 -->
+        <a href="#right-panel" data-icon="gear" data-shadow="false" data-iconshadow="false" class="ui-btn-right">메뉴</a>
         <!-- <a href="#" data-icon="gear" class="ui-btn-right">메뉴</a>-->
         <a href="#" data-icon="gear" class="ui-btn-left">회원</a>
     </div><!-- /header -->
@@ -134,6 +193,141 @@
     <div data-role="content">
         <div data-role="content">
             <h1>Second Page</h1>
+            <div class="row">
+                <div class="col-sm-6">
+                    <form>
+                        <fieldset data-role="controlgroup">
+                            <div class="dropdown">
+                                <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">서울
+                                    <span class="caret"></span></button>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">Octagon</a></li>
+                                    <li><a href="#">ELLUI</a></li>
+                                    <li><a href="#">Mass</a></li>
+                                    <li><a href="#">Answer</a></li>
+                                    <li><a href="#">ARENA</a></li>
+                                    <li><a href="#">M2</a></li>
+                                    <li><a href="#">NB</a></li>
+                                </ul>
+                            </div>
+                            <div class="dropdown">
+                                <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">인천
+                                    <span class="caret"></span></button>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">HTML</a></li>
+                                    <li><a href="#">CSS</a></li>
+                                    <li><a href="#">JavaScript</a></li>
+                                </ul>
+                            </div>
+                            <div class="dropdown">
+                                <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">강원
+                                    <span class="caret"></span></button>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">HTML</a></li>
+                                    <li><a href="#">CSS</a></li>
+                                    <li><a href="#">JavaScript</a></li>
+                                </ul>
+                            </div>
+                            <div class="dropdown">
+                                <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">충청
+                                    <span class="caret"></span></button>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">HTML</a></li>
+                                    <li><a href="#">CSS</a></li>
+                                    <li><a href="#">JavaScript</a></li>
+                                </ul>
+                            </div>
+                            <div class="dropdown">
+                                <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">대전
+                                    <span class="caret"></span></button>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">HTML</a></li>
+                                    <li><a href="#">CSS</a></li>
+                                    <li><a href="#">JavaScript</a></li>
+                                </ul>
+                            </div>
+                            <div class="dropdown">
+                                <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">대구
+                                    <span class="caret"></span></button>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">HTML</a></li>
+                                    <li><a href="#">CSS</a></li>
+                                    <li><a href="#">JavaScript</a></li>
+                                </ul>
+                            </div>
+                            <div class="dropdown">
+                                <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">부산
+                                    <span class="caret"></span></button>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">HTML</a></li>
+                                    <li><a href="#">CSS</a></li>
+                                    <li><a href="#">JavaScript</a></li>
+                                </ul>
+                            </div>
+                        </fieldset>
+                    </form>
+                </div>
+                <div class="col-sm-6">
+                    <form>
+                        <fieldset data-role="controlgroup">
+                            <div class="dropdown">
+                                <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">경기
+                                    <span class="caret"></span></button>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">HTML</a></li>
+                                    <li><a href="#">CSS</a></li>
+                                    <li><a href="#">JavaScript</a></li>
+                                </ul>
+                            </div>
+                            <div class="dropdown">
+                                <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">경상
+                                    <span class="caret"></span></button>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">HTML</a></li>
+                                    <li><a href="#">CSS</a></li>
+                                    <li><a href="#">JavaScript</a></li>
+                                </ul>
+                            </div>
+                            <div class="dropdown">
+                                <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">전라
+                                    <span class="caret"></span></button>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">HTML</a></li>
+                                    <li><a href="#">CSS</a></li>
+                                    <li><a href="#">JavaScript</a></li>
+                                </ul>
+                            </div>
+                            <div class="dropdown">
+                                <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">울산
+                                    <span class="caret"></span></button>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">HTML</a></li>
+                                    <li><a href="#">CSS</a></li>
+                                    <li><a href="#">JavaScript</a></li>
+                                </ul>
+                            </div>
+                            <div class="dropdown">
+                                <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">광주
+                                    <span class="caret"></span></button>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">HTML</a></li>
+                                    <li><a href="#">CSS</a></li>
+                                    <li><a href="#">JavaScript</a></li>
+                                </ul>
+                            </div>
+                            <div class="dropdown">
+                                <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">제주
+                                    <span class="caret"></span></button>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">HTML</a></li>
+                                    <li><a href="#">CSS</a></li>
+                                    <li><a href="#">JavaScript</a></li>
+                                </ul>
+                            </div>
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
         </div>
     </div> <!-- /content  -->
 
@@ -173,6 +367,21 @@
 
     <div data-role="content">
         <h1>Third Page</h1>
+        <div class="container">
+            <h2>Dropdowns</h2>
+            <p>The .divider class is used to separate links inside the dropdown menu:</p>
+            <div class="dropdown">
+                <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Tutorials
+                    <span class="caret"></span></button>
+                <ul class="dropdown-menu">
+                    <li><a href="#">HTML</a></li>
+                    <li><a href="#">CSS</a></li>
+                    <li><a href="#">JavaScript</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#">About Us</a></li>
+                </ul>
+            </div>
+        </div>
     </div> <!-- /content  -->
 
     <!-- footer -->
